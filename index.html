@@ -1,1 +1,1026 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ADAMS MORGAN COMMUNITY ALLIANCE | adamsmorgancommunityalliance.bond</title>
+  <meta name="description" content="Official website of ADAMS MORGAN COMMUNITY ALLIANCE (EIN: 82-1834452), a Washington, DC nonprofit dedicated to civic stewardship, neighborhood vitality, and community advocacy in Adams Morgan." />
+  
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Google Fonts: Plus Jakarta Sans & Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet" />
 
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+            display: ['Plus Jakarta Sans', 'system-ui', 'sans-serif'],
+          },
+          colors: {
+            civic: {
+              950: '#0F1E2E',
+              900: '#162A3E',
+              800: '#1F3B57',
+              700: '#2A4E72',
+              100: '#EBF1F6',
+              50: '#F5F8FB',
+            },
+            rowhouse: {
+              700: '#9A3B26',
+              600: '#B84A32',
+              500: '#CE5A40',
+              100: '#FCECE8',
+              50: '#FDF5F3',
+            },
+            sage: {
+              700: '#2E5947',
+              600: '#3B705A',
+              100: '#E8F2EE',
+              50: '#F3F8F6',
+            },
+            stonewarm: {
+              50: '#FAF9F6',
+              100: '#F3F1EC',
+              200: '#E5E1D8',
+            }
+          }
+        }
+      }
+    };
+  </script>
+
+  <style>
+    /* Smooth page fade transition */
+    .page-view {
+      display: none;
+      animation: fadeIn 0.28s ease-out forwards;
+    }
+    .page-view.active {
+      display: block;
+    }
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(6px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+<body class="bg-stonewarm-50 text-slate-800 font-sans antialiased flex flex-col min-h-screen selection:bg-rowhouse-100 selection:text-rowhouse-700">
+
+  <!-- Top Official Nonprofit Banner -->
+  <div class="bg-civic-950 text-slate-200 text-xs py-2 px-4 border-b border-civic-800">
+    <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-1.5 text-center sm:text-left">
+      <div class="flex flex-wrap items-center justify-center sm:justify-start gap-x-4 gap-y-1">
+        <span class="font-semibold tracking-wide text-white uppercase">ADAMS MORGAN COMMUNITY ALLIANCE</span>
+        <span class="hidden md:inline text-slate-500">|</span>
+        <span class="text-slate-300">501(c)(3) Nonprofit &bull; EIN: <strong class="text-white font-semibold">82-1834452</strong></span>
+      </div>
+      <div class="flex items-center gap-4">
+        <a href="mailto:query@adamsmorgancommunityalliance.bond" class="hover:text-white underline decoration-rowhouse-500 underline-offset-2 transition">
+          query@adamsmorgancommunityalliance.bond
+        </a>
+        <span class="hidden lg:inline text-slate-400">Washington, DC 20009</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Sticky Navigation Header -->
+  <header class="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-stonewarm-200 shadow-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        
+        <!-- Brand Logo -->
+        <a href="#home" data-route="home" class="nav-link flex items-center gap-3.5 group focus:outline-none">
+          <div class="w-11 h-11 rounded-xl bg-civic-900 flex items-center justify-center text-white shadow-sm group-hover:bg-rowhouse-600 transition-colors shrink-0">
+            <!-- Custom Architectural / Community SVG Emblem -->
+            <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M3 21h18" />
+              <path d="M5 21V9l4-4 4 4v12" />
+              <path d="M13 21V11l4-3 3 3v10" />
+              <path d="M8 14h2" />
+              <path d="M8 17h2" />
+              <path d="M16 15h1" />
+            </svg>
+          </div>
+          <div class="flex flex-col">
+            <span class="font-display font-extrabold text-sm sm:text-base tracking-tight text-civic-950 leading-tight">
+              ADAMS MORGAN
+            </span>
+            <span class="font-display font-bold text-xs tracking-wider text-rowhouse-600 uppercase">
+              Community Alliance
+            </span>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation Links -->
+        <nav class="hidden md:flex items-center gap-1 lg:gap-2" aria-label="Primary Navigation">
+          <a href="#home" data-route="home" class="nav-link px-3.5 py-2 rounded-lg text-sm font-semibold transition-colors">
+            Home
+          </a>
+          <a href="#about" data-route="about" class="nav-link px-3.5 py-2 rounded-lg text-sm font-semibold transition-colors">
+            About Us
+          </a>
+          <a href="#contact" data-route="contact" class="nav-link px-3.5 py-2 rounded-lg text-sm font-semibold transition-colors">
+            Contact Us
+          </a>
+          <a href="#privacy" data-route="privacy" class="nav-link px-3.5 py-2 rounded-lg text-sm font-semibold transition-colors">
+            Privacy Policy
+          </a>
+          <a href="#terms" data-route="terms" class="nav-link px-3.5 py-2 rounded-lg text-sm font-semibold transition-colors">
+            Terms of Use
+          </a>
+        </nav>
+
+        <!-- Desktop CTA -->
+        <div class="hidden md:flex items-center">
+          <a href="#contact" data-route="contact" class="nav-link inline-flex items-center gap-2 bg-rowhouse-600 hover:bg-rowhouse-700 text-white text-sm font-semibold px-4 py-2.5 rounded-xl shadow-sm transition-all">
+            <span>Connect With Us</span>
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+            </svg>
+          </a>
+        </div>
+
+        <!-- Mobile Menu Button -->
+        <button id="mobile-menu-btn" type="button" aria-expanded="false" aria-controls="mobile-menu" class="md:hidden inline-flex items-center justify-center p-2.5 rounded-xl text-civic-900 hover:bg-stonewarm-100 focus:outline-none focus:ring-2 focus:ring-civic-800">
+          <span class="sr-only">Open main menu</span>
+          <svg id="menu-icon-open" class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+          <svg id="menu-icon-close" class="w-6 h-6 hidden" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Navigation Panel -->
+    <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-stonewarm-200 px-4 pt-3 pb-5 space-y-1.5 shadow-lg">
+      <a href="#home" data-route="home" class="nav-link mobile-nav-item block px-4 py-3 rounded-xl text-base font-semibold">
+        Home
+      </a>
+      <a href="#about" data-route="about" class="nav-link mobile-nav-item block px-4 py-3 rounded-xl text-base font-semibold">
+        About Us
+      </a>
+      <a href="#contact" data-route="contact" class="nav-link mobile-nav-item block px-4 py-3 rounded-xl text-base font-semibold">
+        Contact Us
+      </a>
+      <a href="#privacy" data-route="privacy" class="nav-link mobile-nav-item block px-4 py-3 rounded-xl text-base font-semibold">
+        Privacy Policy
+      </a>
+      <a href="#terms" data-route="terms" class="nav-link mobile-nav-item block px-4 py-3 rounded-xl text-base font-semibold">
+        Terms of Use
+      </a>
+    </div>
+  </header>
+
+  <!-- Main Content Area (Multi-Page Views) -->
+  <main class="flex-grow">
+
+    <!-- =========================================================
+         PAGE 1: HOME
+         ========================================================= -->
+    <section id="page-home" class="page-view active" aria-labelledby="home-heading">
+      
+      <!-- Hero Banner -->
+      <div class="relative bg-civic-900 text-white overflow-hidden">
+        <!-- Subtle Geometric Decorative Pattern -->
+        <div class="absolute inset-0 opacity-10 pointer-events-none">
+          <svg class="w-full h-full" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <pattern id="dc-grid" width="40" height="40" patternUnits="userSpaceOnUse">
+                <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#ffffff" stroke-width="1" />
+              </pattern>
+            </defs>
+            <rect width="100%" height="100%" fill="url(#dc-grid)" />
+          </svg>
+        </div>
+
+        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24 lg:py-28">
+          <div class="grid lg:grid-cols-12 gap-10 lg:gap-12 items-center">
+            <div class="lg:col-span-7 space-y-6">
+              <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-civic-800/90 border border-civic-700 text-xs sm:text-sm font-medium text-rowhouse-100">
+                <span class="w-2 h-2 rounded-full bg-rowhouse-500"></span>
+                <span>Serving Washington, DC 20009 &bull; EIN: 82-1834452</span>
+              </div>
+              
+              <h1 id="home-heading" class="font-display text-3xl sm:text-5xl lg:text-[3.25rem] font-extrabold tracking-tight leading-[1.15] text-white">
+                Strengthening Civic Life &amp; Neighborhood Vitality in <span class="text-rowhouse-500">Adams Morgan</span>
+              </h1>
+              
+              <p class="text-base sm:text-lg text-slate-200 leading-relaxed max-w-2xl">
+                <strong>ADAMS MORGAN COMMUNITY ALLIANCE</strong> brings together residents, local stewards, small businesses, and civic partners in Washington, DC to preserve neighborhood heritage, care for public spaces, and advance inclusive community resilience.
+              </p>
+
+              <div class="flex flex-col sm:flex-row gap-3.5 pt-2">
+                <a href="#about" data-route="about" class="nav-link inline-flex items-center justify-center gap-2 bg-rowhouse-600 hover:bg-rowhouse-500 text-white font-semibold px-6 py-3.5 rounded-xl shadow-md transition-all">
+                  <span>Explore Our Mission</span>
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+                  </svg>
+                </a>
+                <a href="#contact" data-route="contact" class="nav-link inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 text-white border border-white/25 font-semibold px-6 py-3.5 rounded-xl transition-all">
+                  <span>Contact the Alliance</span>
+                </a>
+              </div>
+            </div>
+
+            <!-- Hero Summary Card -->
+            <div class="lg:col-span-5">
+              <div class="bg-white text-slate-800 rounded-2xl p-6 sm:p-8 shadow-xl border border-stonewarm-200">
+                <div class="flex items-center justify-between pb-4 mb-5 border-b border-stonewarm-200">
+                  <div>
+                    <p class="text-xs font-bold uppercase tracking-wider text-rowhouse-600">Community Focus</p>
+                    <h2 class="font-display text-lg font-bold text-civic-950">Adams Morgan, DC</h2>
+                  </div>
+                  <span class="px-3 py-1 rounded-full bg-sage-100 text-sage-700 text-xs font-bold">
+                    501(c)(3) Active
+                  </span>
+                </div>
+
+                <ul class="space-y-4 text-sm">
+                  <li class="flex items-start gap-3">
+                    <span class="w-6 h-6 rounded-lg bg-civic-100 text-civic-800 flex items-center justify-center shrink-0 mt-0.5 font-bold">1</span>
+                    <div>
+                      <p class="font-semibold text-civic-950">Public Space &amp; Park Stewardship</p>
+                      <p class="text-slate-600">Caring for shared plazas, streetscapes, tree boxes, and pedestrian corridors across 18th Street and Columbia Road.</p>
+                    </div>
+                  </li>
+                  <li class="flex items-start gap-3">
+                    <span class="w-6 h-6 rounded-lg bg-rowhouse-100 text-rowhouse-700 flex items-center justify-center shrink-0 mt-0.5 font-bold">2</span>
+                    <div>
+                      <p class="font-semibold text-civic-950">Neighborhood Culture &amp; Local Heritage</p>
+                      <p class="text-slate-600">Celebrating the diverse multicultural history, arts, and independent businesses that define Adams Morgan.</p>
+                    </div>
+                  </li>
+                  <li class="flex items-start gap-3">
+                    <span class="w-6 h-6 rounded-lg bg-sage-100 text-sage-700 flex items-center justify-center shrink-0 mt-0.5 font-bold">3</span>
+                    <div>
+                      <p class="font-semibold text-civic-950">Civic Engagement &amp; Resident Voice</p>
+                      <p class="text-slate-600">Facilitating constructive dialogue between neighbors, community leaders, and municipal partners.</p>
+                    </div>
+                  </li>
+                </ul>
+
+                <div class="mt-6 pt-4 border-t border-stonewarm-200 flex items-center justify-between text-xs text-slate-500">
+                  <span>Official Domain: <strong class="text-civic-900">adamsmorgancommunityalliance.bond</strong></span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Core Pillars Section -->
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
+        <div class="text-center max-w-3xl mx-auto mb-12 sm:mb-16">
+          <p class="text-xs font-bold uppercase tracking-widest text-rowhouse-600 mb-2">What We Do</p>
+          <h2 class="font-display text-2xl sm:text-4xl font-extrabold text-civic-950 mb-4">
+            Four Pillars of Neighborhood Stewardship
+          </h2>
+          <p class="text-slate-600 text-base sm:text-lg">
+            Our programs are designed around practical, grass-roots collaboration to keep Adams Morgan welcoming, clean, culturally vibrant, and connected.
+          </p>
+        </div>
+
+        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <!-- Pillar 1 -->
+          <div class="bg-white rounded-2xl p-6 border border-stonewarm-200 shadow-sm hover:shadow-md transition-shadow flex flex-col">
+            <div class="w-12 h-12 rounded-xl bg-sage-100 text-sage-700 flex items-center justify-center mb-5">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
+              </svg>
+            </div>
+            <h3 class="font-display text-lg font-bold text-civic-950 mb-2">Green Spaces &amp; Cleanups</h3>
+            <p class="text-sm text-slate-600 leading-relaxed flex-grow">
+              Organizing volunteer neighborhood cleanups, tree-box planting initiatives, and sustainability projects that enhance urban canopy and pedestrian safety.
+            </p>
+          </div>
+
+          <!-- Pillar 2 -->
+          <div class="bg-white rounded-2xl p-6 border border-stonewarm-200 shadow-sm hover:shadow-md transition-shadow flex flex-col">
+            <div class="w-12 h-12 rounded-xl bg-civic-100 text-civic-800 flex items-center justify-center mb-5">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z" />
+              </svg>
+            </div>
+            <h3 class="font-display text-lg font-bold text-civic-950 mb-2">Civic Advocacy &amp; Forums</h3>
+            <p class="text-sm text-slate-600 leading-relaxed flex-grow">
+              Hosting accessible community listening sessions, public safety dialogues, and civic literacy workshops so every resident has an informed voice.
+            </p>
+          </div>
+
+          <!-- Pillar 3 -->
+          <div class="bg-white rounded-2xl p-6 border border-stonewarm-200 shadow-sm hover:shadow-md transition-shadow flex flex-col">
+            <div class="w-12 h-12 rounded-xl bg-rowhouse-100 text-rowhouse-700 flex items-center justify-center mb-5">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+              </svg>
+            </div>
+            <h3 class="font-display text-lg font-bold text-civic-950 mb-2">Small Business &amp; Culture</h3>
+            <p class="text-sm text-slate-600 leading-relaxed flex-grow">
+              Championing locally owned restaurants, artisans, and cultural traditions that make Adams Morgan one of Washington, DC's most iconic neighborhoods.
+            </p>
+          </div>
+
+          <!-- Pillar 4 -->
+          <div class="bg-white rounded-2xl p-6 border border-stonewarm-200 shadow-sm hover:shadow-md transition-shadow flex flex-col">
+            <div class="w-12 h-12 rounded-xl bg-amber-100 text-amber-800 flex items-center justify-center mb-5">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+              </svg>
+            </div>
+            <h3 class="font-display text-lg font-bold text-civic-950 mb-2">Neighbor Mutual Support</h3>
+            <p class="text-sm text-slate-600 leading-relaxed flex-grow">
+              Connecting seniors, families, and newcomers with local resource directories, seasonal supply drives, and volunteer assistance networks.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Call-to-Action & Transparency Strip -->
+      <div class="bg-civic-50 border-y border-stonewarm-200 py-14 sm:py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="bg-white rounded-3xl p-8 sm:p-10 border border-stonewarm-200 shadow-sm flex flex-col lg:flex-row items-start lg:items-center justify-between gap-8">
+            <div class="space-y-2 max-w-2xl">
+              <span class="inline-block text-xs font-bold uppercase tracking-wider text-sage-700 bg-sage-100 px-3 py-1 rounded-full">
+                Accountable Community Governance
+              </span>
+              <h2 class="font-display text-2xl sm:text-3xl font-extrabold text-civic-950">
+                Have a Neighborhood Idea, Question, or Partnership Proposal?
+              </h2>
+              <p class="text-slate-600 text-sm sm:text-base">
+                Reach out directly to <strong>ADAMS MORGAN COMMUNITY ALLIANCE</strong> (EIN: 82-1834452) at <a href="mailto:query@adamsmorgancommunityalliance.bond" class="text-rowhouse-600 font-semibold hover:underline">query@adamsmorgancommunityalliance.bond</a> or via mail at PO BOX 21344, WASHINGTON DC 20009.
+              </p>
+            </div>
+            <div class="flex flex-wrap gap-3 shrink-0">
+              <a href="#contact" data-route="contact" class="nav-link bg-civic-900 hover:bg-civic-800 text-white font-semibold px-6 py-3.5 rounded-xl transition">
+                Get in Touch
+              </a>
+              <a href="#about" data-route="about" class="nav-link bg-stonewarm-100 hover:bg-stonewarm-200 text-civic-950 font-semibold px-6 py-3.5 rounded-xl transition">
+                Learn About Us
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         PAGE 2: ABOUT US
+         ========================================================= -->
+    <section id="page-about" class="page-view" aria-labelledby="about-heading">
+      <div class="bg-civic-900 text-white py-14 sm:py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <p class="text-xs font-bold uppercase tracking-widest text-rowhouse-500 mb-2">About Our Organization</p>
+          <h1 id="about-heading" class="font-display text-3xl sm:text-5xl font-extrabold tracking-tight mb-4">
+            About ADAMS MORGAN COMMUNITY ALLIANCE
+          </h1>
+          <p class="text-slate-200 text-base sm:text-lg max-w-3xl leading-relaxed">
+            A Washington, DC nonprofit organization dedicated to collaborative stewardship, civic engagement, and long-term neighborhood well-being across Adams Morgan.
+          </p>
+        </div>
+      </div>
+
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14 sm:py-20">
+        <div class="grid lg:grid-cols-12 gap-10 lg:gap-12 items-start">
+          
+          <!-- Narrative Content -->
+          <div class="lg:col-span-7 space-y-6 text-slate-700 leading-relaxed">
+            <h2 class="font-display text-2xl sm:text-3xl font-bold text-civic-950">
+              Our Story &amp; Civic Purpose
+            </h2>
+            <p>
+              Adams Morgan has long stood as one of Washington, DC's most vibrant, historic, and culturally diverse neighborhoods—defined by its iconic 19th-century rowhouses, tree-lined residential blocks, independent storefronts, and rich multicultural heritage. <strong>ADAMS MORGAN COMMUNITY ALLIANCE</strong> was established to unite neighbors around the shared responsibility of preserving and strengthening this unique community fabric.
+            </p>
+            <p>
+              Operating as a tax-exempt 501(c)(3) nonprofit organization (Federal EIN: <strong>82-1834452</strong>), we serve as a civic bridge between long-time residents, newcomers, local merchants, youth, seniors, and public-interest stakeholders. We believe that thriving neighborhoods are built when community members have transparent avenues to collaborate on practical local improvements.
+            </p>
+
+            <h3 class="font-display text-xl sm:text-2xl font-bold text-civic-950 pt-2">
+              Our Vision &amp; Core Values
+            </h3>
+            <div class="grid sm:grid-cols-2 gap-4 pt-1">
+              <div class="bg-white p-5 rounded-2xl border border-stonewarm-200">
+                <h4 class="font-display font-bold text-civic-950 mb-1.5">Inclusive Representation</h4>
+                <p class="text-sm text-slate-600">Ensuring neighbors of every background, age, and tenure feel heard, respected, and welcomed in neighborhood decisions.</p>
+              </div>
+              <div class="bg-white p-5 rounded-2xl border border-stonewarm-200">
+                <h4 class="font-display font-bold text-civic-950 mb-1.5">Transparent Stewardship</h4>
+                <p class="text-sm text-slate-600">Maintaining clear public accountability, ethical governance, and responsible management of charitable resources.</p>
+              </div>
+              <div class="bg-white p-5 rounded-2xl border border-stonewarm-200">
+                <h4 class="font-display font-bold text-civic-950 mb-1.5">Neighborhood Resilience</h4>
+                <p class="text-sm text-slate-600">Supporting small businesses, green infrastructure, and neighbor-to-neighbor mutual aid networks.</p>
+              </div>
+              <div class="bg-white p-5 rounded-2xl border border-stonewarm-200">
+                <h4 class="font-display font-bold text-civic-950 mb-1.5">Constructive Partnership</h4>
+                <p class="text-sm text-slate-600">Working alongside local civic bodies, District agencies, and peer nonprofits to solve shared urban challenges.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Official Organizational Credentials Sidebar -->
+          <div class="lg:col-span-5">
+            <div class="bg-white rounded-2xl p-6 sm:p-8 border border-stonewarm-200 shadow-sm space-y-6">
+              <div class="border-b border-stonewarm-200 pb-4">
+                <span class="text-xs font-bold uppercase tracking-wider text-rowhouse-600">Public Registry Profile</span>
+                <h2 class="font-display text-xl font-bold text-civic-950 mt-1">Official Organization Details</h2>
+              </div>
+
+              <dl class="space-y-4 text-sm">
+                <div>
+                  <dt class="text-xs font-semibold uppercase tracking-wider text-slate-500">Legal Organization Name</dt>
+                  <dd class="font-bold text-civic-950 text-base mt-0.5">ADAMS MORGAN COMMUNITY ALLIANCE</dd>
+                </div>
+                <div>
+                  <dt class="text-xs font-semibold uppercase tracking-wider text-slate-500">Federal Tax ID (EIN)</dt>
+                  <dd class="font-mono font-bold text-civic-900 text-base mt-0.5">82-1834452</dd>
+                </div>
+                <div>
+                  <dt class="text-xs font-semibold uppercase tracking-wider text-slate-500">Tax-Exempt Classification</dt>
+                  <dd class="font-medium text-slate-800 mt-0.5">501(c)(3) Public Charity Nonprofit</dd>
+                </div>
+                <div>
+                  <dt class="text-xs font-semibold uppercase tracking-wider text-slate-500">Official Mailing Address</dt>
+                  <dd class="font-medium text-slate-800 mt-0.5">PO BOX 21344, WASHINGTON DC 20009</dd>
+                </div>
+                <div>
+                  <dt class="text-xs font-semibold uppercase tracking-wider text-slate-500">Official Contact Email</dt>
+                  <dd class="mt-0.5">
+                    <a href="mailto:query@adamsmorgancommunityalliance.bond" class="font-semibold text-rowhouse-600 hover:underline break-all">
+                      query@adamsmorgancommunityalliance.bond
+                    </a>
+                  </dd>
+                </div>
+                <div>
+                  <dt class="text-xs font-semibold uppercase tracking-wider text-slate-500">Official Web Domain</dt>
+                  <dd class="font-semibold text-civic-900 mt-0.5">adamsmorgancommunityalliance.bond</dd>
+                </div>
+              </dl>
+
+              <div class="pt-2">
+                <a href="#contact" data-route="contact" class="nav-link w-full inline-flex items-center justify-center bg-civic-900 hover:bg-civic-800 text-white font-semibold py-3 px-5 rounded-xl transition">
+                  Contact Our Team
+                </a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         PAGE 3: CONTACT US
+         ========================================================= -->
+    <section id="page-contact" class="page-view" aria-labelledby="contact-heading">
+      <div class="bg-civic-900 text-white py-14 sm:py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <p class="text-xs font-bold uppercase tracking-widest text-rowhouse-500 mb-2">Reach Out</p>
+          <h1 id="contact-heading" class="font-display text-3xl sm:text-5xl font-extrabold tracking-tight mb-4">
+            Contact Us
+          </h1>
+          <p class="text-slate-200 text-base sm:text-lg max-w-3xl leading-relaxed">
+            We welcome inquiries from Adams Morgan residents, community partners, volunteers, donors, and local press.
+          </p>
+        </div>
+      </div>
+
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14 sm:py-20">
+        <div class="grid lg:grid-cols-12 gap-10 lg:gap-12">
+          
+          <!-- Direct Contact Credentials Card -->
+          <div class="lg:col-span-5 space-y-6">
+            <div class="bg-white rounded-2xl p-6 sm:p-8 border border-stonewarm-200 shadow-sm space-y-6">
+              <div>
+                <span class="inline-block text-xs font-bold uppercase tracking-wider text-rowhouse-600 bg-rowhouse-50 px-3 py-1 rounded-full mb-2">
+                  Official Directory
+                </span>
+                <h2 class="font-display text-2xl font-bold text-civic-950">
+                  ADAMS MORGAN COMMUNITY ALLIANCE
+                </h2>
+                <p class="text-sm text-slate-600 mt-1">
+                  Use the official details below for general correspondence, grant verification, or community inquiries.
+                </p>
+              </div>
+
+              <div class="space-y-5 pt-2">
+                <!-- Organization Name -->
+                <div class="flex items-start gap-3.5">
+                  <div class="w-10 h-10 rounded-xl bg-civic-100 text-civic-800 flex items-center justify-center shrink-0">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5" />
+                    </svg>
+                  </div>
+                  <div>
+                    <p class="text-xs font-bold uppercase tracking-wider text-slate-500">Organization Name</p>
+                    <p class="font-bold text-civic-950 text-base">ADAMS MORGAN COMMUNITY ALLIANCE</p>
+                  </div>
+                </div>
+
+                <!-- Email with Copy Action -->
+                <div class="flex items-start gap-3.5">
+                  <div class="w-10 h-10 rounded-xl bg-rowhouse-100 text-rowhouse-700 flex items-center justify-center shrink-0">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                    </svg>
+                  </div>
+                  <div class="min-w-0 flex-1">
+                    <p class="text-xs font-bold uppercase tracking-wider text-slate-500">Official Email</p>
+                    <a href="mailto:query@adamsmorgancommunityalliance.bond" class="font-semibold text-rowhouse-600 hover:underline break-all block mt-0.5">
+                      query@adamsmorgancommunityalliance.bond
+                    </a>
+                    <button id="copy-email-btn" type="button" class="mt-2 inline-flex items-center gap-1.5 text-xs font-semibold text-civic-800 bg-civic-100 hover:bg-civic-200 px-3 py-1.5 rounded-lg transition">
+                      <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
+                      </svg>
+                      <span id="copy-email-label">Copy Email Address</span>
+                    </button>
+                  </div>
+                </div>
+
+                <!-- EIN -->
+                <div class="flex items-start gap-3.5">
+                  <div class="w-10 h-10 rounded-xl bg-sage-100 text-sage-700 flex items-center justify-center shrink-0">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                    </svg>
+                  </div>
+                  <div>
+                    <p class="text-xs font-bold uppercase tracking-wider text-slate-500">Federal EIN</p>
+                    <p class="font-mono font-bold text-civic-950 text-base">82-1834452</p>
+                  </div>
+                </div>
+
+                <!-- Mailing Address -->
+                <div class="flex items-start gap-3.5">
+                  <div class="w-10 h-10 rounded-xl bg-amber-100 text-amber-800 flex items-center justify-center shrink-0">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                    </svg>
+                  </div>
+                  <div>
+                    <p class="text-xs font-bold uppercase tracking-wider text-slate-500">Mailing Address</p>
+                    <p class="font-bold text-civic-950 text-base">PO BOX 21344, WASHINGTON DC 20009</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Interactive Contact Form -->
+          <div class="lg:col-span-7">
+            <div class="bg-white rounded-2xl p-6 sm:p-8 border border-stonewarm-200 shadow-sm">
+              <h2 class="font-display text-2xl font-bold text-civic-950 mb-2">Send Us a Message</h2>
+              <p class="text-sm text-slate-600 mb-6">
+                Complete the form below to send an inquiry to <strong>ADAMS MORGAN COMMUNITY ALLIANCE</strong>.
+              </p>
+
+              <!-- Form Status Banner -->
+              <div id="contact-feedback" class="hidden mb-6 p-4 rounded-xl border text-sm" role="status" aria-live="polite"></div>
+
+              <form id="contact-form" class="space-y-5" novalidate>
+                <div class="grid sm:grid-cols-2 gap-5">
+                  <div>
+                    <label for="contact-name" class="block text-sm font-semibold text-civic-950 mb-1.5">Full Name *</label>
+                    <input type="text" id="contact-name" name="name" required placeholder="e.g., Jordan Taylor" class="w-full px-4 py-3 rounded-xl border border-stonewarm-200 bg-stonewarm-50/50 text-slate-900 focus:outline-none focus:ring-2 focus:ring-civic-800 focus:bg-white transition" />
+                  </div>
+                  <div>
+                    <label for="contact-email" class="block text-sm font-semibold text-civic-950 mb-1.5">Email Address *</label>
+                    <input type="email" id="contact-email" name="email" required placeholder="you@example.com" class="w-full px-4 py-3 rounded-xl border border-stonewarm-200 bg-stonewarm-50/50 text-slate-900 focus:outline-none focus:ring-2 focus:ring-civic-800 focus:bg-white transition" />
+                  </div>
+                </div>
+
+                <div>
+                  <label for="contact-topic" class="block text-sm font-semibold text-civic-950 mb-1.5">Inquiry Category</label>
+                  <select id="contact-topic" name="topic" class="w-full px-4 py-3 rounded-xl border border-stonewarm-200 bg-stonewarm-50/50 text-slate-900 focus:outline-none focus:ring-2 focus:ring-civic-800 focus:bg-white transition">
+                    <option value="General Community Inquiry">General Community Inquiry</option>
+                    <option value="Volunteer & Neighborhood Stewardship">Volunteer &amp; Neighborhood Stewardship</option>
+                    <option value="Local Business / Nonprofit Partnership">Local Business / Nonprofit Partnership</option>
+                    <option value="Donor & 501(c)(3) Verification">Donor &amp; 501(c)(3) Verification (EIN: 82-1834452)</option>
+                    <option value="Privacy or Legal Inquiry">Privacy or Legal Inquiry</option>
+                  </select>
+                </div>
+
+                <div>
+                  <label for="contact-message" class="block text-sm font-semibold text-civic-950 mb-1.5">Message *</label>
+                  <textarea id="contact-message" name="message" rows="5" required placeholder="How can ADAMS MORGAN COMMUNITY ALLIANCE assist you or collaborate with your initiative?" class="w-full px-4 py-3 rounded-xl border border-stonewarm-200 bg-stonewarm-50/50 text-slate-900 focus:outline-none focus:ring-2 focus:ring-civic-800 focus:bg-white transition"></textarea>
+                </div>
+
+                <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pt-1">
+                  <p class="text-xs text-slate-500">
+                    Direct email alternative: <a href="mailto:query@adamsmorgancommunityalliance.bond" class="text-rowhouse-600 font-semibold hover:underline">query@adamsmorgancommunityalliance.bond</a>
+                  </p>
+                  <button type="submit" class="inline-flex items-center justify-center gap-2 bg-rowhouse-600 hover:bg-rowhouse-700 text-white font-semibold px-6 py-3.5 rounded-xl shadow-sm transition">
+                    <span>Submit Message</span>
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
+                    </svg>
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         PAGE 4: PRIVACY POLICY
+         ========================================================= -->
+    <section id="page-privacy" class="page-view" aria-labelledby="privacy-heading">
+      <div class="bg-civic-900 text-white py-14 sm:py-16">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <p class="text-xs font-bold uppercase tracking-widest text-rowhouse-500 mb-2">Legal &amp; Governance</p>
+          <h1 id="privacy-heading" class="font-display text-3xl sm:text-4xl font-extrabold tracking-tight mb-3">
+            Privacy Policy
+          </h1>
+          <p class="text-slate-300 text-sm sm:text-base">
+            Effective Date: January 1, 2026 &bull; Domain: <strong>adamsmorgancommunityalliance.bond</strong>
+          </p>
+        </div>
+      </div>
+
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
+        <div class="bg-white rounded-2xl p-6 sm:p-10 border border-stonewarm-200 shadow-sm space-y-8 text-slate-700 leading-relaxed">
+          
+          <div class="p-4 sm:p-5 rounded-xl bg-civic-50 border border-civic-100 text-sm text-civic-950">
+            <strong>ADAMS MORGAN COMMUNITY ALLIANCE</strong> (Federal EIN: <strong>82-1834452</strong>), located at <strong>PO BOX 21344, WASHINGTON DC 20009</strong>, respects the privacy of our neighbors, website visitors, volunteers, and supporters. This Privacy Policy describes how we collect, protect, and use information gathered through <strong>adamsmorgancommunityalliance.bond</strong>.
+          </div>
+
+          <section class="space-y-3">
+            <h2 class="font-display text-xl font-bold text-civic-950">1. Information We Collect</h2>
+            <p>
+              We collect only the information reasonably necessary to operate our community programs, respond to inquiries, and fulfill our 501(c)(3) charitable mission:
+            </p>
+            <ul class="list-disc pl-6 space-y-2 text-sm sm:text-base">
+              <li><strong>Voluntary Contact Submissions:</strong> Name, email address, inquiry category, and message content when you submit a contact form or email us at <a href="mailto:query@adamsmorgancommunityalliance.bond" class="text-rowhouse-600 underline">query@adamsmorgancommunityalliance.bond</a>.</li>
+              <li><strong>Volunteer &amp; Event Sign-Ups:</strong> Contact details and neighborhood participation preferences provided when registering for community cleanups, forums, or initiatives.</li>
+              <li><strong>Donor Records:</strong> If you contribute financially, we maintain records required for tax-deductible acknowledgment receipts and IRS compliance (payment card numbers are processed solely by PCI-compliant third-party processors and are never stored on our servers).</li>
+              <li><strong>Standard Technical Logs:</strong> Non-identifying browser type, device category, referring page, and aggregated traffic metrics used strictly to maintain site reliability and accessibility.</li>
+            </ul>
+          </section>
+
+          <section class="space-y-3">
+            <h2 class="font-display text-xl font-bold text-civic-950">2. How We Use Information</h2>
+            <p>Information collected through <strong>adamsmorgancommunityalliance.bond</strong> is used solely to:</p>
+            <ul class="list-disc pl-6 space-y-2 text-sm sm:text-base">
+              <li>Respond to community questions, civic feedback, and partnership requests.</li>
+              <li>Coordinate neighborhood volunteer activities, meetings, and public announcements.</li>
+              <li>Issue official 501(c)(3) donation acknowledgments referencing EIN <strong>82-1834452</strong>.</li>
+              <li>Ensure website security, accessibility, and compliance with District of Columbia and federal nonprofit regulations.</li>
+            </ul>
+          </section>
+
+          <section class="space-y-3">
+            <h2 class="font-display text-xl font-bold text-civic-950">3. Strict Non-Sale &amp; Non-Sharing Commitment</h2>
+            <p>
+              <strong>ADAMS MORGAN COMMUNITY ALLIANCE</strong> does <strong>not</strong> sell, rent, trade, or lease personal information, donor lists, or email addresses to any commercial marketers, political campaigns, or third-party data brokers. Information is shared only with essential service providers (such as secure web hosting or payment processors) bound by confidentiality obligations, or when required by applicable law.
+            </p>
+          </section>
+
+          <section class="space-y-3">
+            <h2 class="font-display text-xl font-bold text-civic-950">4. Data Security &amp; Retention</h2>
+            <p>
+              We employ industry-standard encryption (HTTPS/TLS) and administrative access controls to protect submitted information against unauthorized access or disclosure. We retain personal records only as long as needed to fulfill the charitable purpose for which they were collected or to satisfy legal accounting requirements.
+            </p>
+          </section>
+
+          <section class="space-y-3">
+            <h2 class="font-display text-xl font-bold text-civic-950">5. Your Privacy Choices &amp; Contact Information</h2>
+            <p>
+              You may request access to, correction of, or deletion of your personal contact information at any time by contacting us directly:
+            </p>
+            <div class="bg-stonewarm-50 p-4 rounded-xl border border-stonewarm-200 text-sm space-y-1">
+              <p><strong>Organization:</strong> ADAMS MORGAN COMMUNITY ALLIANCE</p>
+              <p><strong>EIN:</strong> 82-1834452</p>
+              <p><strong>Email:</strong> <a href="mailto:query@adamsmorgancommunityalliance.bond" class="text-rowhouse-600 font-semibold hover:underline">query@adamsmorgancommunityalliance.bond</a></p>
+              <p><strong>Mailing Address:</strong> PO BOX 21344, WASHINGTON DC 20009</p>
+            </div>
+          </section>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         PAGE 5: TERMS OF USE
+         ========================================================= -->
+    <section id="page-terms" class="page-view" aria-labelledby="terms-heading">
+      <div class="bg-civic-900 text-white py-14 sm:py-16">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <p class="text-xs font-bold uppercase tracking-widest text-rowhouse-500 mb-2">Legal &amp; Governance</p>
+          <h1 id="terms-heading" class="font-display text-3xl sm:text-4xl font-extrabold tracking-tight mb-3">
+            Terms of Use
+          </h1>
+          <p class="text-slate-300 text-sm sm:text-base">
+            Effective Date: January 1, 2026 &bull; Domain: <strong>adamsmorgancommunityalliance.bond</strong>
+          </p>
+        </div>
+      </div>
+
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
+        <div class="bg-white rounded-2xl p-6 sm:p-10 border border-stonewarm-200 shadow-sm space-y-8 text-slate-700 leading-relaxed">
+          
+          <section class="space-y-3">
+            <h2 class="font-display text-xl font-bold text-civic-950">1. Acceptance of Terms</h2>
+            <p>
+              Welcome to <strong>adamsmorgancommunityalliance.bond</strong>, the official website of <strong>ADAMS MORGAN COMMUNITY ALLIANCE</strong> (EIN: <strong>82-1834452</strong>). By accessing or using this website, you agree to comply with and be bound by these Terms of Use and our Privacy Policy. If you do not agree with these terms, please discontinue use of the site.
+            </p>
+          </section>
+
+          <section class="space-y-3">
+            <h2 class="font-display text-xl font-bold text-civic-950">2. Charitable &amp; Informational Purpose</h2>
+            <p>
+              This website is operated exclusively for charitable, educational, and civic engagement purposes in support of the Adams Morgan neighborhood in Washington, DC. Content published on this site is intended to inform residents, partners, and supporters about our community initiatives and governance.
+            </p>
+          </section>
+
+          <section class="space-y-3">
+            <h2 class="font-display text-xl font-bold text-civic-950">3. Permitted &amp; Prohibited Conduct</h2>
+            <p>Visitors agree to use <strong>adamsmorgancommunityalliance.bond</strong> lawfully and respectfully. You agree not to:</p>
+            <ul class="list-disc pl-6 space-y-2 text-sm sm:text-base">
+              <li>Submit false, misleading, defamatory, or unlawful information through our contact forms.</li>
+              <li>Attempt to disrupt, overload, probe, or compromise the technical security or availability of the website.</li>
+              <li>Use automated scrapers, bots, or harvesting tools to extract email addresses or site content for commercial solicitation.</li>
+              <li>Misrepresent your affiliation with <strong>ADAMS MORGAN COMMUNITY ALLIANCE</strong>.</li>
+            </ul>
+          </section>
+
+          <section class="space-y-3">
+            <h2 class="font-display text-xl font-bold text-civic-950">4. Intellectual Property</h2>
+            <p>
+              All text, organizational branding, logos, original graphics, and layouts on <strong>adamsmorgancommunityalliance.bond</strong> are the property of <strong>ADAMS MORGAN COMMUNITY ALLIANCE</strong> unless otherwise credited. You may share or quote public informational materials for non-commercial community, educational, or journalistic reporting with proper attribution to <strong>ADAMS MORGAN COMMUNITY ALLIANCE</strong>.
+            </p>
+          </section>
+
+          <section class="space-y-3">
+            <h2 class="font-display text-xl font-bold text-civic-950">5. External Links &amp; Disclaimer of Warranties</h2>
+            <p>
+              Our website may reference local civic bodies, District of Columbia agencies, or community partners. We are not responsible for the content or privacy practices of external websites. This site is provided on an "as is" and "as available" basis without warranties of any kind, express or implied.
+            </p>
+          </section>
+
+          <section class="space-y-3">
+            <h2 class="font-display text-xl font-bold text-civic-950">6. Governing Law &amp; Contact</h2>
+            <p>
+              These Terms of Use shall be governed by and construed in accordance with the laws of the <strong>District of Columbia</strong>. Questions regarding these Terms may be directed to:
+            </p>
+            <div class="bg-stonewarm-50 p-4 rounded-xl border border-stonewarm-200 text-sm space-y-1">
+              <p><strong>ADAMS MORGAN COMMUNITY ALLIANCE</strong> (EIN: 82-1834452)</p>
+              <p><strong>Email:</strong> <a href="mailto:query@adamsmorgancommunityalliance.bond" class="text-rowhouse-600 font-semibold hover:underline">query@adamsmorgancommunityalliance.bond</a></p>
+              <p><strong>Mailing Address:</strong> PO BOX 21344, WASHINGTON DC 20009</p>
+            </div>
+          </section>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Site-Wide Footer -->
+  <footer class="bg-civic-950 text-slate-300 border-t border-civic-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
+      <div class="grid md:grid-cols-12 gap-10 pb-10 border-b border-civic-800">
+        
+        <!-- Organization Identity -->
+        <div class="md:col-span-5 space-y-4">
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-xl bg-rowhouse-600 flex items-center justify-center text-white shrink-0">
+              <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M3 21h18" />
+                <path d="M5 21V9l4-4 4 4v12" />
+                <path d="M13 21V11l4-3 3 3v10" />
+              </svg>
+            </div>
+            <div>
+              <p class="font-display font-extrabold text-white text-sm tracking-tight">ADAMS MORGAN COMMUNITY ALLIANCE</p>
+              <p class="text-xs text-slate-400">adamsmorgancommunityalliance.bond</p>
+            </div>
+          </div>
+          <p class="text-sm text-slate-400 leading-relaxed">
+            A Washington, DC 501(c)(3) nonprofit organization advancing civic engagement, neighborhood stewardship, and community vitality in Adams Morgan.
+          </p>
+          <div class="text-xs text-slate-300 space-y-1 pt-1">
+            <p><span class="text-slate-400">EIN:</span> <strong class="text-white font-mono">82-1834452</strong></p>
+            <p><span class="text-slate-400">Mailing Address:</span> PO BOX 21344, WASHINGTON DC 20009</p>
+            <p>
+              <span class="text-slate-400">Email:</span> 
+              <a href="mailto:query@adamsmorgancommunityalliance.bond" class="text-rowhouse-400 hover:text-white underline">
+                query@adamsmorgancommunityalliance.bond
+              </a>
+            </p>
+          </div>
+        </div>
+
+        <!-- Navigation Links -->
+        <div class="md:col-span-3 space-y-3">
+          <h3 class="font-display text-xs font-bold uppercase tracking-wider text-white">Navigation</h3>
+          <ul class="space-y-2.5 text-sm">
+            <li><a href="#home" data-route="home" class="nav-link hover:text-white transition">Home</a></li>
+            <li><a href="#about" data-route="about" class="nav-link hover:text-white transition">About Us</a></li>
+            <li><a href="#contact" data-route="contact" class="nav-link hover:text-white transition">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <!-- Legal & Governance Links -->
+        <div class="md:col-span-4 space-y-3">
+          <h3 class="font-display text-xs font-bold uppercase tracking-wider text-white">Legal &amp; Governance</h3>
+          <ul class="space-y-2.5 text-sm">
+            <li><a href="#privacy" data-route="privacy" class="nav-link hover:text-white transition">Privacy Policy</a></li>
+            <li><a href="#terms" data-route="terms" class="nav-link hover:text-white transition">Terms of Use</a></li>
+          </ul>
+          <p class="text-xs text-slate-400 pt-2 leading-relaxed">
+            Contributions to ADAMS MORGAN COMMUNITY ALLIANCE (EIN: 82-1834452) support charitable neighborhood programs in Washington, DC.
+          </p>
+        </div>
+
+      </div>
+
+      <div class="pt-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-400">
+        <p>&copy; <span id="current-year">2026</span> ADAMS MORGAN COMMUNITY ALLIANCE. All rights reserved.</p>
+        <p>Official Website: <span class="text-slate-300 font-medium">adamsmorgancommunityalliance.bond</span></p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Client-Side Routing & Interactive Logic -->
+  <script>
+    (function () {
+      const VALID_ROUTES = ['home', 'about', 'contact', 'privacy', 'terms'];
+      const pageViews = document.querySelectorAll('.page-view');
+      const navLinks = document.querySelectorAll('.nav-link');
+      const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+      const mobileMenu = document.getElementById('mobile-menu');
+      const iconOpen = document.getElementById('menu-icon-open');
+      const iconClose = document.getElementById('menu-icon-close');
+
+      // Set dynamic copyright year
+      const yearEl = document.getElementById('current-year');
+      if (yearEl) yearEl.textContent = new Date().getFullYear();
+
+      // Switch active page view and highlight active links
+      function navigateTo(route, updateHash = true) {
+        const targetRoute = VALID_ROUTES.includes(route) ? route : 'home';
+
+        pageViews.forEach((section) => {
+          if (section.id === `page-${targetRoute}`) {
+            section.classList.add('active');
+          } else {
+            section.classList.remove('active');
+          }
+        });
+
+        // Update active state on header and mobile links
+        navLinks.forEach((link) => {
+          const linkRoute = link.getAttribute('data-route');
+          const isHeaderDesktopLink = link.closest('header nav');
+          const isMobileLink = link.classList.contains('mobile-nav-item');
+
+          if (isHeaderDesktopLink) {
+            if (linkRoute === targetRoute) {
+              link.classList.add('bg-civic-100', 'text-civic-950');
+              link.classList.remove('text-slate-600', 'hover:text-civic-950', 'hover:bg-stonewarm-100');
+            } else {
+              link.classList.remove('bg-civic-100', 'text-civic-950');
+              link.classList.add('text-slate-600', 'hover:text-civic-950', 'hover:bg-stonewarm-100');
+            }
+          }
+
+          if (isMobileLink) {
+            if (linkRoute === targetRoute) {
+              link.classList.add('bg-civic-100', 'text-civic-950');
+              link.classList.remove('text-slate-700', 'hover:bg-stonewarm-100');
+            } else {
+              link.classList.remove('bg-civic-100', 'text-civic-950');
+              link.classList.add('text-slate-700', 'hover:bg-stonewarm-100');
+            }
+          }
+        });
+
+        if (updateHash) {
+          history.replaceState(null, '', `#${targetRoute}`);
+        }
+
+        // Close mobile drawer if open
+        if (mobileMenu && !mobileMenu.classList.contains('hidden')) {
+          mobileMenu.classList.add('hidden');
+          mobileMenuBtn.setAttribute('aria-expanded', 'false');
+          iconOpen.classList.remove('hidden');
+          iconClose.classList.add('hidden');
+        }
+
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }
+
+      // Attach click handlers to all route links
+      navLinks.forEach((link) => {
+        link.addEventListener('click', (e) => {
+          const route = link.getAttribute('data-route');
+          if (route) {
+            e.preventDefault();
+            navigateTo(route, true);
+          }
+        });
+      });
+
+      // Mobile Menu Toggle
+      if (mobileMenuBtn && mobileMenu) {
+        mobileMenuBtn.addEventListener('click', () => {
+          const isHidden = mobileMenu.classList.toggle('hidden');
+          mobileMenuBtn.setAttribute('aria-expanded', String(!isHidden));
+          iconOpen.classList.toggle('hidden', !isHidden);
+          iconClose.classList.toggle('hidden', isHidden);
+        });
+      }
+
+      // Listen for URL hash changes
+      window.addEventListener('hashchange', () => {
+        const hashRoute = window.location.hash.replace('#', '').toLowerCase();
+        navigateTo(hashRoute || 'home', false);
+      });
+
+      // Initial route load from hash
+      const initialRoute = window.location.hash.replace('#', '').toLowerCase() || 'home';
+      navigateTo(initialRoute, false);
+
+      // Copy Email Button on Contact Page (uses execCommand fallback for iframe compatibility)
+      const copyEmailBtn = document.getElementById('copy-email-btn');
+      const copyEmailLabel = document.getElementById('copy-email-label');
+      if (copyEmailBtn && copyEmailLabel) {
+        copyEmailBtn.addEventListener('click', () => {
+          const emailText = 'query@adamsmorgancommunityalliance.bond';
+          const tempInput = document.createElement('textarea');
+          tempInput.value = emailText;
+          tempInput.style.position = 'fixed';
+          tempInput.style.opacity = '0';
+          document.body.appendChild(tempInput);
+          tempInput.select();
+          try {
+            document.execCommand('copy');
+            copyEmailLabel.textContent = 'Copied to Clipboard!';
+            setTimeout(() => {
+              copyEmailLabel.textContent = 'Copy Email Address';
+            }, 2500);
+          } catch (err) {
+            copyEmailLabel.textContent = emailText;
+          }
+          document.body.removeChild(tempInput);
+        });
+      }
+
+      // Interactive Contact Form Validation & Confirmation
+      const contactForm = document.getElementById('contact-form');
+      const contactFeedback = document.getElementById('contact-feedback');
+      if (contactForm && contactFeedback) {
+        contactForm.addEventListener('submit', (e) => {
+          e.preventDefault();
+
+          const name = document.getElementById('contact-name').value.trim();
+          const email = document.getElementById('contact-email').value.trim();
+          const topic = document.getElementById('contact-topic').value;
+          const message = document.getElementById('contact-message').value.trim();
+
+          if (!name || !email || !message) {
+            contactFeedback.className = 'mb-6 p-4 rounded-xl border border-rowhouse-500 bg-rowhouse-50 text-rowhouse-700 text-sm font-medium';
+            contactFeedback.textContent = 'Please complete your name, email address, and message before submitting.';
+            contactFeedback.classList.remove('hidden');
+            return;
+          }
+
+          const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+          if (!emailPattern.test(email)) {
+            contactFeedback.className = 'mb-6 p-4 rounded-xl border border-rowhouse-500 bg-rowhouse-50 text-rowhouse-700 text-sm font-medium';
+            contactFeedback.textContent = 'Please enter a valid email address.';
+            contactFeedback.classList.remove('hidden');
+            return;
+          }
+
+          contactFeedback.className = 'mb-6 p-4 rounded-xl border border-sage-600 bg-sage-50 text-sage-700 text-sm';
+          contactFeedback.innerHTML = `
+            <p class="font-bold text-civic-950 mb-1">Thank you, ${name.replace(/</g, '&lt;')}!</p>
+            <p>Your message regarding <strong>${topic.replace(/</g, '&lt;')}</strong> has been logged for <strong>ADAMS MORGAN COMMUNITY ALLIANCE</strong>. For immediate correspondence, you can also reach us directly at <a href="mailto:query@adamsmorgancommunityalliance.bond" class="underline font-semibold">query@adamsmorgancommunityalliance.bond</a>.</p>
+          `;
+          contactFeedback.classList.remove('hidden');
+          contactForm.reset();
+        });
+      }
+    })();
+  </script>
+</body>
+</html>
